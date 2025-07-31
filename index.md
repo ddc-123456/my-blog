@@ -15,7 +15,7 @@ hero:
       link: /api-examples
     - theme: alt
       text: 测试
-      link: /test
+      link: /test/
 
 features:
   - title: Feature A
