@@ -1,5 +1,5 @@
 import {defineConfig} from 'vitepress'
-import AutoSidebar from 'vite-plugin-vitepress-auto-sidebar'
+import {generateSidebar} from "vitepress-sidebar";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: "/my-blog/",
@@ -13,15 +13,9 @@ export default defineConfig({
       {text: '测试', link: '/test'}
     ],
 
-    sidebar: [
-      {
-        text: 'Examples',
-        items: [
-          {text: 'Markdown Examples', link: '/markdown-examples'},
-          {text: 'Runtime API Examples', link: '/api-examples'}
-        ]
-      }
-    ],
+    sidebar:generateSidebar({
+
+    }),
 
     socialLinks: [
       {icon: 'github', link: 'https://github.com/vuejs/vitepress'}
@@ -52,12 +46,7 @@ export default defineConfig({
   },
   vite: {
     plugins: [
-      AutoSidebar({
-        path: '.',
-        collapsed: false,
-        ignoreList: ['.obsidian', '.git', 'node_modules',],
-        ignoreIndexItem: true
-      })
+
     ]
   },
 
