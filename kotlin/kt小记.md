@@ -65,3 +65,6 @@ fun main() {
 }
 ```
 
+# 包导入小记 lifecycle.viewmodel.compose
+
+很疑惑为什么我仅导入navigation-compose就能使用lifecycle.runtime包里的viewmodel，查了好久发现viewmodel不是lifecycle.runtime里面的，而是lifecycle.viewmodel.compose里面的，在手动导入lifecycle.viewmodel.compose后可以正常使用
